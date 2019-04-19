@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  &:link,
+  :visited {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+input {
+  outline: none;
+  color: #505050;
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+}

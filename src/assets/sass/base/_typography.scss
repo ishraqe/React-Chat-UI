@@ -1,0 +1,33 @@
+
+
+body {
+  // font-family: "Source_Sans_Pro", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
+  /* font-size: 16px; */
+  color: #505050;
+  line-height: 1.42857143;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: #505050;
+  }
+}
+
+.heading-secondary {
+  color: $color-black;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: red;
+}
+.heading-primary {
+  color: $color-black;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.heading-tertiary {
+  color: $default-font-color;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
