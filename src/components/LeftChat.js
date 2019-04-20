@@ -1,8 +1,6 @@
 import React from "react";
-import { usersList } from "../DB/DB";
 
-const LeftChat = () => {
-  console.log(usersList());
+const LeftChat = ({ userList, clickHandler }) => {
   return (
     <div className="left">
       <div className="top">
@@ -10,13 +8,15 @@ const LeftChat = () => {
         <a href="javascript:;" className="search" />
       </div>
       <ul className="people">
-        {usersList().map(user => {
+        {userList.map((user, index) => {
           return (
             <li className="person" data-chat="person1">
-              <img src={user.imgSource} alt="" />
-              <span className="name">{user.name}</span>
-              <span className="time">{user.time}</span>
-              <span className="preview">{user.preview}</span>
+              <a onClick={() => clickHandler(index)}>
+                <img src={user.imgSource} alt="" />
+                <span className="name">{user.name}</span>
+                <span className="time">{user.time}</span>
+                <span className="preview">{user.preview}</span>
+              </a>
             </li>
           );
         })}

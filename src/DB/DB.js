@@ -81,5 +81,23 @@ export const usersList = () => {
 
 //11
 export const msgList = () => {
-  return [{}];
+  return [
+    {
+      time: "Today, 6:48 AM",
+      bubble: [
+        {
+          my: [
+            { msg: "Hello, can you hear me?" },
+            { msg: "I'm in California dreaming" }
+          ]
+        },
+        {
+          other: [
+            { msg: "... about who we used to be." },
+            { msg: "Are you serious?" }
+          ]
+        }
+      ]
+    }
+  ];
 };

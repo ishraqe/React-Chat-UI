@@ -1,22 +1,22 @@
 import React from "react";
 import WriteChat from "./WriteChat";
 
-const RightChat = () => {
+const RightChat = ({ msgList, activeChat }) => {
   return (
     <div className="right">
       <div className="top">
         <span>
-          To: <span className="name">Dog Woofson</span>
+          To: <span className="name">{activeChat ? activeChat.name : ""}</span>
         </span>
       </div>
-      <div className="chat" data-chat="person1">
+      {/* <div className="chat" data-chat="person1">
         <div className="conversation-start">
           <span>Today, 6:48 AM</span>
         </div>
         <div className="bubble you">Hello,</div>
         <div className="bubble you">it's me.</div>
         <div className="bubble you">I was wondering...</div>
-      </div>
+      </div> */}
       <div className="chat" data-chat="person2">
         <div className="conversation-start">
           <span>Today, 5:38 PM</span>
@@ -27,8 +27,20 @@ const RightChat = () => {
         <div className="bubble me">Are you serious?</div>
         <div className="bubble you">When we were younger and free...</div>
         <div className="bubble you">I've forgotten how it felt before</div>
+        <div className="bubble you">Hello, can you hear me?</div>
+        <div className="bubble you">I'm in California dreaming</div>
+        <div className="bubble me">... about who we used to be.</div>
+        <div className="bubble me">Are you serious?</div>
+        <div className="bubble you">When we were younger and free...</div>
+        <div className="bubble you">I've forgotten how it felt before</div>
+        <div className="bubble you">Hello, can you hear me?</div>
+        <div className="bubble you">I'm in California dreaming</div>
+        <div className="bubble me">... about who we used to be.</div>
+        <div className="bubble me">Are you serious?</div>
+        <div className="bubble you">When we were younger and free...</div>
+        <div className="bubble you">I've forgotten how it felt before</div>
       </div>
-      <div className="chat" data-chat="person3">
+      {/* <div className="chat" data-chat="person3">
         <div className="conversation-start">
           <span>Today, 3:38 AM</span>
         </div>
@@ -78,6 +90,7 @@ const RightChat = () => {
         <div className="bubble me">Why aren't you answering?</div>
         <div className="bubble you">howdoyoudoaspace</div>
       </div>
+       */}
       <WriteChat />
     </div>
   );

@@ -276,6 +276,7 @@ body {
         float: left;
         width: 62.4%;
         height: 100%;
+        overflow: hidden;
         .top {
             width: 100%;
             height: 47px;
@@ -292,13 +293,13 @@ body {
         }
         .chat {
             position: relative;
-            display: none;
-            overflow: hidden;
+            display: block;
+            overflow: scroll;
             padding: 0 35px 92px;
             border-width: 1px 1px 1px 0;
             border-style: solid;
             border-color: var(--light);
-            height: calc(100% - 48px);
+            height: calc(100% - 32px);
             justify-content: flex-end;
             flex-direction: column;
             &.active-chat {
@@ -314,68 +315,75 @@ body {
                 }
             }
         }
-        .write {
+        .write-container {
             position: absolute;
-            bottom: 29px;
-            left: 30px;
-            height: 42px;
-            padding-left: 8px;
-            border: 1px solid var(--light);
-            background-color: #eceff1;
-            width: calc(100% - 58px);
-            border-radius: 5px;
-            input {
-                font-size: 16px;
-                float: left;
-                width: 87%;
-                height: 40px;
-                padding: 0 10px;
-                color: var(--dark);
-                border: 0;
-                outline: none;
+            bottom: 0;
+            left: 0;
+            padding: 2rem;
+            background-color: white;
+            width: calc(100% - 1.5rem);
+            .write {
+               
+                height: 42px;
+                padding-left: 8px;
+                border: 1px solid var(--light);
                 background-color: #eceff1;
-                @include font;
-            }
-            .write-link {
-                &.attach {
-                    &:before {
-                        display: inline-block;
-                        float: left;
-                        width: 20px;
-                        height: 42px;
-                        content: '';
-                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/attachment.png');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
+                width: calc(100% - 1rem);
+                border-radius: 5px;
+                input {
+                    font-size: 16px;
+                    float: left;
+                    width: 87%;
+                    height: 40px;
+                    padding: 0 10px;
+                    color: var(--dark);
+                    border: 0;
+                    outline: none;
+                    background-color: #eceff1;
+                    @include font;
                 }
-                &.smiley {
-                    &:before {
-                        display: inline-block;
-                        float: left;
-                        width: 20px;
-                        height: 42px;
-                        content: '';
-                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/smiley.png');
-                        background-repeat: no-repeat;
-                        background-position: center;
+                .write-link {
+                    &.attach {
+                        &:before {
+                            display: inline-block;
+                            float: left;
+                            width: 20px;
+                            height: 42px;
+                            content: '';
+                            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/attachment.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
                     }
-                }
-                &.send {
-                    &:before {
-                        display: inline-block;
-                        float: left;
-                        width: 20px;
-                        height: 42px;
-                        margin-left: 11px;
-                        content: '';
-                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png');
-                        background-repeat: no-repeat;
-                        background-position: center;
+                    &.smiley {
+                        &:before {
+                            display: inline-block;
+                            float: left;
+                            width: 20px;
+                            height: 42px;
+                            content: '';
+                            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/smiley.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+                    &.send {
+                        &:before {
+                            display: inline-block;
+                            float: left;
+                            width: 20px;
+                            height: 42px;
+                            margin-left: 11px;
+                            content: '';
+                            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
                     }
                 }
             }
         }
+       
         .bubble {
             font-size: 16px;
             position: relative;
