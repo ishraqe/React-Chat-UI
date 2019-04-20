@@ -1,13 +1,20 @@
 
-## Available Scripts
-Static Chat UI Built with React 
+## Static Chat UI Built with React 
 
 ##Preview
+![Preview](./src/DB/preview.png)
 
-### `yarn start` to run
+### Make own copy
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First clone the repository using:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+    git clone https://github.com/ishraqe/React-Chat-UI
+
+Then install the dependencies using:
+
+    yarn
+
+
+After that start application with:
+
+    yarn start
