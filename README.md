@@ -18,3 +18,9 @@ Then install the dependencies using:
 After that start application with:
 
     yarn start
+
+To build:
+
+    yarn run build
+
+After that you will get a build folder. Paste it in your websites document root. voila!!
